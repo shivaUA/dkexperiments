@@ -19,8 +19,8 @@ It has two endpoints:
 There are two ways to start the project.
 
 ### 1) Database in Docker and API project from VisualStudio (or other IDE)
-To start database navigate to /Database folder of the project in a PowerShell (_or something else if you are not on Windows_) and run the following command: **docker-compose -f database.yml up**.
-Inside the same folder you can find a second compose file named **test-database.yml**. It is needed to run a database for unit tests in Docker. To start it run the following command: **docker-compose -f test-database.yml up**. After that you can run unit tests from a project.
+To start database navigate to /Database folder of the project in a PowerShell (_or something else if you are not on Windows_) and run the following command: **docker-compose -f database.yaml up**.
+Inside the same folder you can find a second compose file named **test-database.yaml**. It is needed to run a database for unit tests in Docker. To start it run the following command: **docker-compose -f test-database.yaml up**. After that you can run unit tests from a project.
 
 To start the project just open it in your IDE and run the **DKExperiments.API** project.
 In this case Development settings will be used. You can find them in **appsettings.Development.json** file.
