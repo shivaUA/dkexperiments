@@ -1,6 +1,6 @@
-﻿using DKExperiments.Core.Models;
+﻿using DKExperiments.API.Models;
+using DKExperiments.Core.Models;
 using DKExperiments.Core.Services.Abstractions;
-using DKExperiments.API.Models;
 
 namespace DKExperiments.API.Endpoints;
 

@@ -1,10 +1,10 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using DKExperiments.Core.Calculations.Abstractions;
+﻿using DKExperiments.Core.Calculations.Abstractions;
 using DKExperiments.Core.Extensions;
 using DKExperiments.Core.Models;
 using DKExperiments.Core.Services.Abstractions;
 using DKExperiments.DB.Models.Prices;
 using DKExperiments.DB.Repositories.Abstractions;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace DKExperiments.Core.Services;
 
@@ -44,11 +44,7 @@ public class PricesManager(IAggregatedPricesRepository repo, IServiceProvider se
 			}
 		}
 
-		return new PriceInfo
-		{
-			Timestamp = time,
-			Close = record!.Close
-		};
+		return new PriceInfo(time, record!.Close);
 	}
 
 	/// <summary>
@@ -63,10 +59,6 @@ public class PricesManager(IAggregatedPricesRepository repo, IServiceProvider se
 		var list = await repo.ListAsync(new AggregatedPriceSearchModel(start, end, (int)market), cancellationToken);
 
 		return [..list
-			.Select(x => new PriceInfo
-			{
-				Timestamp = x.Timestamp,
-				Close = x.Close
-			})];
+			.Select(x => new PriceInfo(x.Timestamp, x.Close))];
 	}
 }

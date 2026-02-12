@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DKExperiments.DB.Models.Prices;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using DKExperiments.DB.Models.Prices;
 
 namespace DKExperiments.DB.Configurations.Prices;
 

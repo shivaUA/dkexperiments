@@ -1,10 +1,10 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Polly;
-using Polly.Retry;
-using DKExperiments.Core.Calculations;
+﻿using DKExperiments.Core.Calculations;
 using DKExperiments.Core.Calculations.Abstractions;
 using DKExperiments.Core.Services;
 using DKExperiments.Core.Services.Abstractions;
+using Microsoft.Extensions.DependencyInjection;
+using Polly;
+using Polly.Retry;
 
 namespace DKExperiments.Core.Dependency;
 

@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
-using DKExperiments.Core.Extensions;
+﻿using DKExperiments.Core.Extensions;
 using DKExperiments.Core.Models;
 using DKExperiments.Core.Services.Abstractions;
+using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 
 namespace DKExperiments.Core.Services;
 
@@ -49,14 +49,11 @@ public class BitfinexParser(IOptions<ParsersConfigModel> parsersConfig, IHttpCli
 			{
 				var item = data.First();
 
-				return new ParcerOHLCResponse
-				{
-					// Uncomment all prices in case they are needed
-					//Open = item[1],
-					//High = item[3],
-					//Low = item[4],
-					Close = item[2]
-				};
+				return new ParcerOHLCResponse(item[2]);
+				// Uncomment all prices in case they are needed
+				//Open = item[1],
+				//High = item[3],
+				//Low = item[4],
 			}
 		}
 

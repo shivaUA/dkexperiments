@@ -1,14 +1,5 @@
 ﻿namespace DKExperiments.Core.Models;
 
-public record ParserSettingsModel
-{
-	public string? Url { get; set; }
-	public string? TimestampType { get; set; }
-	public string? TimestampFormat { get; set; }
-}
+public record ParserSettingsModel(string? Url, string? TimestampType, string? TimestampFormat);
 
-public record ParsersConfigModel
-{
-	public ParserSettingsModel? Bitfinex { get; set; }
-	public ParserSettingsModel? Bitstamp { get; set; }
-}
+public record ParsersConfigModel(ParserSettingsModel? Bitfinex, ParserSettingsModel? Bitstamp);

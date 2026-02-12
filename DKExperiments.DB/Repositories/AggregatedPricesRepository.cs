@@ -1,7 +1,7 @@
 ﻿using System.Data;
-using Microsoft.EntityFrameworkCore;
 using DKExperiments.DB.Models.Prices;
 using DKExperiments.DB.Repositories.Abstractions;
+using Microsoft.EntityFrameworkCore;
 
 namespace DKExperiments.DB.Repositories;
 

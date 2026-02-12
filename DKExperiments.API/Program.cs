@@ -1,11 +1,11 @@
 using System.Text.Json.Nodes;
-using Microsoft.OpenApi;
 using DKExperiments.API.Converters;
+using DKExperiments.API.Endpoints;
 using DKExperiments.Core.Dependency;
 using DKExperiments.Core.Models;
 using DKExperiments.DB;
 using DKExperiments.DB.Dependency;
-using DKExperiments.API.Endpoints;
+using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 

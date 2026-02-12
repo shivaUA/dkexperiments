@@ -1,8 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DKExperiments.DB.Repositories;
+using DKExperiments.DB.Repositories.Abstractions;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using DKExperiments.DB.Repositories;
-using DKExperiments.DB.Repositories.Abstractions;
 
 namespace DKExperiments.DB.Dependency;
 

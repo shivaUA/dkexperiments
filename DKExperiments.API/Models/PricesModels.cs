@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using DKExperiments.Core.Models;
 using DKExperiments.API.Validation;
+using DKExperiments.Core.Models;
 
 namespace DKExperiments.API.Models;
 

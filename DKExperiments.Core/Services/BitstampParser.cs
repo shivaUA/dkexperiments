@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
-using DKExperiments.Core.Extensions;
+﻿using DKExperiments.Core.Extensions;
 using DKExperiments.Core.Models;
 using DKExperiments.Core.Services.Abstractions;
+using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 
 namespace DKExperiments.Core.Services;
 
@@ -49,14 +49,11 @@ public class BitstampParser(IOptions<ParsersConfigModel> parsersConfig, IHttpCli
 			{
 				var item = ohlcData.Data.Ohlc.First();
 
-				return new ParcerOHLCResponse
-				{
-					// Uncomment all prices in case they are needed
-					//Open = item.Open,
-					//High = item.High,
-					//Low = item.Low,
-					Close = item.Close
-				};
+				return new ParcerOHLCResponse(item.Close);
+				// Uncomment all prices in case they are needed
+				//Open = item.Open,
+				//High = item.High,
+				//Low = item.Low,
 			}
 		}
 

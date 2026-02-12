@@ -1,5 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
-using DKExperiments.Core.Calculations.Abstractions;
+﻿using DKExperiments.Core.Calculations.Abstractions;
+using Microsoft.Extensions.Configuration;
 
 namespace DKExperiments.Core.Calculations;
 
