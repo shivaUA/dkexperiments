@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dke-api-deployment
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+     app: dke-api
+ template:
+   metadata:
+     labels:
+       app: dke-api
+   spec:
+     containers:
+     - name: dke-api
+       image: localhost:5000/dke-api
+       ports:
+       - containerPort: 8080
+       env:
+         - name: ASPNETCORE_ENVIRONMENT
+           value: "Kubernetes"

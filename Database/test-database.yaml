@@ -1,0 +1,15 @@
+name: dkexperiments
+
+services:
+  parserdb:
+    image: postgres:18-alpine
+    restart: always
+    container_name: 'dke-test-db-container'
+    hostname: 'dke-test-db'
+    environment:
+      POSTGRES_USER: dke-user
+      POSTGRES_PASSWORD: XKd>H#P%G=
+      POSTGRES_DB: dke_test_db
+      POSTGRES_INITDB_ARGS: '--locale-provider=icu --icu-locale=en-US --locale=en_US.utf8'
+    ports:
+      - "54322:5432"

@@ -1,0 +1,25 @@
+<Solution>
+  <Folder Name="/Database/">
+    <File Path="Database/database.yaml" />
+    <File Path="Database/test-database.yaml" />
+  </Folder>
+  <Folder Name="/k8s/">
+    <File Path="k8s/api-deployment.yaml" />
+    <File Path="k8s/api-service.yaml" />
+    <File Path="k8s/db-persistent-volume-claim.yaml" />
+    <File Path="k8s/db-persistent-volume.yaml" />
+    <File Path="k8s/db-service.yaml" />
+    <File Path="k8s/db-stateful-set.yaml" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="DKExperiments.Core.Tests/DKExperiments.Core.Tests.csproj" />
+    <Project Path="DKExperiments.DB.Tests/DKExperiments.DB.Tests.csproj" />
+    <Project Path="DKExperiments.Tests.Base/DKExperiments.Tests.Base.csproj" />
+  </Folder>
+  <Project Path="DKExperiments.API/DKExperiments.API.csproj" />
+  <Project Path="DKExperiments.Core/DKExperiments.Core.csproj" />
+  <Project Path="DKExperiments.DB/DKExperiments.DB.csproj" />
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+</Solution>

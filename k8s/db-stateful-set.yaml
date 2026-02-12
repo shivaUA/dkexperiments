@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: dke-db
+spec:
+  serviceName: "dke-db"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dke-db
+  template:
+    metadata:
+      labels:
+        app: dke-db
+    spec:
+      containers:
+        - name: dke-db
+          image: postgres:18-alpine
+          env:
+            - name: POSTGRES_USER
+              value: "dke-user"
+            - name: POSTGRES_PASSWORD
+              value: "XKd>H#P%G="
+            - name: POSTGRES_DB
+              value: "dke_db"
+            - name: POSTGRES_INITDB_ARGS
+              value: "--locale-provider=icu --icu-locale=en-US --locale=en_US.utf8"
+          ports:
+            - containerPort: 5432
+              name: dke-db-port
+          volumeMounts:
+            - name: dke-db-volume
+              mountPath: /run/desktop/mnt/host/wsl/data/postgres
+      volumes:
+        - name: dke-db-volume
+          persistentVolumeClaim:
+            claimName: dke-db-pvc

@@ -1,0 +1,20 @@
+name: dkexperiments
+
+services:
+  db:
+    image: postgres:18-alpine
+    restart: always
+    container_name: 'dke-db-container'
+    hostname: 'dke-db'
+    environment:
+      POSTGRES_USER: dke-user
+      POSTGRES_PASSWORD: XKd>H#P%G=
+      POSTGRES_DB: dke_db
+      POSTGRES_INITDB_ARGS: '--locale-provider=icu --icu-locale=en-US --locale=en_US.utf8'
+    ports:
+      - "54321:5432"
+    volumes:
+     - dkexperimentsvolume:/var/lib/postgresql/data
+  
+volumes:
+  dkexperimentsvolume:  

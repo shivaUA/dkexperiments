@@ -1,0 +1,44 @@
+name: dkexperiments
+
+services:
+  api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: 'dk-api-container'
+    hostname: 'dk-api'
+    ports:
+     - "8080:8080"
+     - "8081:8081"
+    depends_on:
+     - db
+    environment:
+     - ASPNETCORE_ENVIRONMENT=Production
+    networks:
+     - dkexperiments
+    restart: on-failure:5
+
+  db:
+    image: postgres:18-alpine
+    restart: always
+    container_name: 'dk-db-container'
+    hostname: 'dk-db'
+    environment:
+      POSTGRES_USER: dk-user
+      POSTGRES_PASSWORD: XKd>H#P%G=
+      POSTGRES_DB: dk_db
+      POSTGRES_INITDB_ARGS: '--locale-provider=icu --icu-locale=en-US --locale=en_US.utf8'
+    ports:
+      - "5432:5432"
+    networks:
+     - dkexperiments
+    volumes:
+     - dkexperimentsvolume:/var/lib/postgresql/data
+     
+
+
+networks:
+  dkexperiments:
+  
+volumes:
+  dkexperimentsvolume:    

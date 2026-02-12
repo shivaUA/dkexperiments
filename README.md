@@ -1,5 +1,5 @@
 # DKExperiments
-### This is a pet-project just for some tests, experiments and learning new technilogies (e.g. Docker and Kubernetes).
+### This is a pet-project just for some tests, experiments and learning new technilogies (e.g. Docker and Kubernetes, Unit tests frameworks).
 ### But I'll try to keep it as clean as possible, with descriptions and instructions (because I love clear instructions and explanations).
 #### Project contains logic of an aggregator of the BTC-USD exchange rates.
 
