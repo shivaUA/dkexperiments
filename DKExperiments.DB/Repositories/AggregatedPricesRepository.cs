@@ -1,5 +1,4 @@
-﻿using System.Data;
-using DKExperiments.DB.Models.Prices;
+﻿using DKExperiments.DB.Models.Prices;
 using DKExperiments.DB.Repositories.Abstractions;
 using Microsoft.EntityFrameworkCore;
 

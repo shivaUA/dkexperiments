@@ -15,6 +15,7 @@ public static class ServiceCollectionExtensions
 
 		// Repositories
 		services.AddScoped<IAggregatedPricesRepository, AggregatedPricesRepository>();
+		services.AddScoped<IUsersRepository, UsersRepository>();
 
 		return services;
 	}
