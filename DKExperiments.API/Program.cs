@@ -7,41 +7,6 @@ using DKExperiments.DB;
 using DKExperiments.DB.Dependency;
 using Microsoft.OpenApi;
 
-var arr = new int[] { 1, 2, 3, 5, 4, 5, 6, 7, 8, 5, 9, 5, 0 };
-
-var tmpArr = new int[arr.Length];
-var cnt = 0;
-var lastInd = 0;
-
-for (var i = 0; i < arr.Length; i++)
-{
-	if (arr[i] == 5)
-	{
-		continue;
-	}
-
-	tmpArr[lastInd] = arr[i];
-	cnt++;
-	lastInd++;
-}
-
-var spn = new Span<int>(tmpArr, 0, cnt);
-var res = spn.ToArray();
-
-var newArr = new int[cnt];
-for (int i = 0; i < cnt; i++)
-{
-	newArr[i] = tmpArr[i];
-}
-
-Console.WriteLine(newArr.Length);
-
-
-
-
-
-
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
@@ -90,8 +55,8 @@ app
 
 // Users endpoints
 app
-    .MapGroup("/users")
-    .MapUserRoutes();
+	.MapGroup("/users")
+	.MapUserRoutes();
 
 // Run DB migrations
 DKDBContext.Migrate(app.Services);
