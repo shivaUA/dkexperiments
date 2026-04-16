@@ -1,0 +1,28 @@
+name: Publish to Azure
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - production
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore
+        run: dotnet restore ./DKExperiments.sln
+
+      - name: Build
+        run: dotnet build ./DKExperiments.sln --configuration Release --no-restore
+
+      - name: Publish
+        run: dotnet publish ./DKExperiments.sln --configuration Release --no-build
