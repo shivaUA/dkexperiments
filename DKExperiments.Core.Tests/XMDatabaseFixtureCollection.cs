@@ -1,7 +1,7 @@
-using XMPricesAggregator.Tests.Base;
+using DKExperiments.Tests.Base;
 
-namespace XMPricesAggregator.Core.Tests;
+namespace DKExperiments.Core.Tests;
 
 [CollectionDefinition("Database collection")]
-public class XMDatabaseFixtureCollection : ICollectionFixture<XMDatabaseFixture>
+public class DKDatabaseFixtureCollection : ICollectionFixture<DKDatabaseFixture>
 { }
