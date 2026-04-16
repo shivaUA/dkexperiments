@@ -1,10 +1,10 @@
-using XMPricesAggregator.Core.Calculations;
-using XMPricesAggregator.Tests.Base;
+using DKExperiments.Core.Calculations;
+using DKExperiments.Tests.Base;
 
-namespace XMPricesAggregator.Core.Tests;
+namespace DKExperiments.Core.Tests;
 
 [Collection("Config collection")]
-public class CalculatorTests(XMConfigFixture fixture)
+public class CalculatorTests(DKConfigFixture fixture)
 {
 	[Fact]
 	public void TestCalculatorAVG()

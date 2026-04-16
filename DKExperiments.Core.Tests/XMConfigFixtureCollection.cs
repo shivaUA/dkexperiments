@@ -1,7 +1,7 @@
-using XMPricesAggregator.Tests.Base;
+using DKExperiments.Tests.Base;
 
-namespace XMPricesAggregator.Core.Tests;
+namespace DKExperiments.Core.Tests;
 
 [CollectionDefinition("Config collection")]
-public class XMConfigFixtureCollection : ICollectionFixture<XMConfigFixture>
+public class DKConfigFixtureCollection : ICollectionFixture<DKConfigFixture>
 { }
