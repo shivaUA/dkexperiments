@@ -19,10 +19,10 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: Restore
-        run: dotnet restore ./DKExperiments.sln
+        run: dotnet restore ./DKExperiments.slnx
 
       - name: Build
-        run: dotnet build ./DKExperiments.sln --configuration Release --no-restore
+        run: dotnet build ./DKExperiments.slnx --configuration Release --no-restore
 
       - name: Publish
-        run: dotnet publish ./DKExperiments.sln --configuration Release --no-build
+        run: dotnet publish ./DKExperiments.slnx --configuration Release --no-build
