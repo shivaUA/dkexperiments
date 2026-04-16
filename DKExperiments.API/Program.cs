@@ -9,6 +9,8 @@ using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration.AddEnvironmentVariables();
+
 builder.Services
 	.AddDBServices(builder.Configuration) // Register database services: database, repositories
 	.AddCoreServices(); // Register core services: price parsers, data handling services etc.
