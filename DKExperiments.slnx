@@ -19,6 +19,7 @@
   <Project Path="DKExperiments.API/DKExperiments.API.csproj" />
   <Project Path="DKExperiments.Core/DKExperiments.Core.csproj" />
   <Project Path="DKExperiments.DB/DKExperiments.DB.csproj" />
+  <Project Path="DKExperiments.Functions/DKExperiments.Functions.csproj" Id="21af46ba-1c13-4a2c-aa6d-a3e20ca47dce" />
   <Project Path="docker-compose.dcproj">
     <Build />
   </Project>
