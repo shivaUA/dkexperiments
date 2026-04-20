@@ -55,7 +55,7 @@ jobs:
       uses: docker/build-push-action@v7
       with:
         push: true
-        tags: ${{ env.REGISTRY }}/${{ env.REPO }}:${{ github.sha }}
+        tags: ${{ env.REGISTRY }}/${{ env.REPO }}_functions:${{ github.sha }}
         file: ./DKExperiments.Functions/Dockerfile
 
   deploy:
@@ -72,7 +72,7 @@ jobs:
         id: fa
         with:
           app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-          image: ${{ env.REGISTRY }}/${{ env.REPO }}:${{ github.sha }}
+          image: ${{ env.REGISTRY }}/${{ env.REPO }}_functions:${{ github.sha }}
     
       - name: Azure logout
         run: |
