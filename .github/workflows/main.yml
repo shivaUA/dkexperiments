@@ -3,8 +3,13 @@ name: Publish to Azure
 on:
   workflow_dispatch:
   push:
-    branches:
-    - production
+    branches: [ "production" ]
+    paths:
+     - 'DBExperiments.API/**'
+     - 'DBExperiments.DB/**'
+     - 'DBExperiments.Core/**'
+     - 'docker-compose.yml'
+     - 'Dockerfile'
 
 env:
   AZURE_WEBAPP_NAME: dkexperiments
