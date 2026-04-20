@@ -22,9 +22,9 @@ name: Deploy DKExperiments Functions Container
 on:
   workflow_dispatch:
   push:
-    branches: [ "production" ]
+    branches: [ "main" ]
     paths:
-     - 'DBExperiments.Functions/**'
+     - 'DKExperiments.Functions/**'
 
 permissions:
   contents: read

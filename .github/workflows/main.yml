@@ -8,8 +8,6 @@ on:
      - 'DBExperiments.API/**'
      - 'DBExperiments.DB/**'
      - 'DBExperiments.Core/**'
-     - 'docker-compose.yml'
-     - 'Dockerfile'
 
 env:
   AZURE_WEBAPP_NAME: dkexperiments
@@ -36,7 +34,7 @@ jobs:
       - name: Publish
         run: dotnet publish ./DKExperiments.slnx --configuration Release --no-build --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
 
-      - name: Deploymenb
+      - name: Deployment
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
